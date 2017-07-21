@@ -1,0 +1,40 @@
+include blocks/head-service/head
+include common/mixins
+include common/js
+
+
+body
+	.layout_center_wrapper-project
+		header.header
+			.container__inner
+				+top-line()
+				.header-title-wrapper
+					.col-lg-6.col-md-10.col-sm-18.col-xs-18
+						h1.header-title
+							|Прогноз 
+							span скидок
+						.header-title__text
+							|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+		main.main
+			.container__inner
+				.container-fluid
+					.tabbed
+						.container
+							.row
+								.col-lg-3.col-lg-offset-5.col-md-5.col-md-offset-1.col-sm-6.col-xs-12.np
+									.tabbed__wrap
+										input#tab-nav-1(type='radio', name='tabs')
+										label(for='tab-nav-1') Завершённые
+								.col-lg-3.col-md-5.col-sm-6.col-xs-12.np
+									.tabbed__wrap
+										input#tab-nav-2(type='radio', name='tabs', checked='')
+										label(for='tab-nav-2') Прогноз
+
+		
+			
+				
+
+	+footer-text()
+
+
+	include blocks/footer-service/footer-service
