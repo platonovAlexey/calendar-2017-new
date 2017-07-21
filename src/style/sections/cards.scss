@@ -1,0 +1,189 @@
+.card-wrapper{
+	height: 455px;
+	margin-bottom: 35px;
+	background: #fff;
+	position: relative;
+	overflow: hidden;
+	border-radius: 5px;
+	box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.08);
+	@include clearfix;
+}
+
+.card-disable.card-default{
+	position: relative;
+	min-height: 455px;
+	transition:.5s all;
+	
+	&:after{
+		content: "";
+		display: block;
+		height: 100%;
+		width: 100%;
+		background: rgba(255,255,255,.5);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 10;
+	}
+	.card-top{
+		position: relative;
+		&__img{
+			display: block;
+			width: 100%;
+			height: 184px;
+			margin-bottom: 24px;
+		}
+		&__day{
+			font-family: 'SegoeUIRegular', 'Roboto', sans-serif;
+			color: #000000;
+			font-size: 14px;
+			text-align: center;
+			padding: 8px 21px;
+			border-radius: 17px;
+			background: rgba(255,255,255,.9);
+			position: absolute;
+			top: 12px;
+			right: 12px;
+		}
+	}
+	.card-middle{
+		&__title{
+			font-family: 'SegoeUISemiBold', 'Roboto', sans-serif;
+			font-size: 18px;
+			color: #000000;
+			text-align: center;
+			height: 48px;
+			margin-bottom: 16px;
+		}
+		&__sale{
+			font-family: 'SegoeUIBold', 'Roboto', sans-serif;
+			font-size: 60px;
+			color: #ff7719;
+			text-align: center;
+			height: 44px;
+			margin-bottom: 20px;
+			line-height: 44px;
+		}
+		&__promocode{
+			font-size: 14px;
+			line-height: 15px;
+			height: 15px;
+			margin-bottom: 38px;
+			span{
+				font-family: 'SegoeUISemiBold', 'Roboto', sans-serif;
+				text-transform: uppercase;
+				color: #000000;
+			}
+		}
+	}
+	.card-bottom{
+		position: relative;
+		text-align: center;
+		height: 45px;
+		&__link{
+			font-family: 'SegoeUISemiBold', 'Roboto', sans-serif;
+			font-size: 16px;
+			color: #ffffff;
+			text-align: center;
+			padding: 12px 28px;
+			background: #30dd23;
+			border-radius: 22px;
+			span{
+				vertical-align: top;
+			}
+			&:hover{
+				background: #30c524;
+			}
+		}
+	}
+}
+
+.card-default:hover:after{
+	transition:.5s all;
+	height: 60%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: rgba(255,255,255,.5);
+	display: block;
+	@include MQ(sm){
+		display: none;
+	}
+}
+
+.card-active.card-default{
+	position: relative;
+	min-height: 455px;
+	.card-top{
+		position: relative;
+		&__img{
+			display: block;
+			width: 100%;
+			height: 184px;
+			margin-bottom: 24px;
+		}
+		&__day{
+			font-family: 'SegoeUIRegular', 'Roboto', sans-serif;
+			color: #000000;
+			font-size: 14px;
+			text-align: center;
+			padding: 8px 21px;
+			border-radius: 17px;
+			background: rgba(255,255,255,.9);
+			position: absolute;
+			top: 12px;
+			right: 12px;
+		}
+	}
+	.card-middle{
+		&__title{
+			font-family: 'SegoeUISemiBold', 'Roboto', sans-serif;
+			font-size: 18px;
+			color: #000000;
+			text-align: center;
+			height: 48px;
+			margin-bottom: 16px;
+		}
+		&__sale{
+			font-family: 'SegoeUIBold', 'Roboto', sans-serif;
+			font-size: 60px;
+			color: #ff7719;
+			text-align: center;
+			height: 44px;
+			margin-bottom: 20px;
+			line-height: 44px;
+		}
+		&__promocode{
+			font-size: 14px;
+			line-height: 15px;
+			height: 15px;
+			margin-bottom: 38px;
+			text-align: center;
+			span{
+				font-family: 'SegoeUISemiBold', 'Roboto', sans-serif;
+				text-transform: uppercase;
+				color: #000000;
+			}
+		}
+	}
+	.card-bottom{
+		position: relative;
+		text-align: center;
+		height: 45px;
+		&__link{
+			font-family: 'SegoeUISemiBold', 'Roboto', sans-serif;
+			font-size: 16px;
+			color: #ffffff;
+			text-align: center;
+			padding: 12px 28px;
+			background: #30dd23;
+			border-radius: 22px;
+			span{
+				vertical-align: top;
+			}
+			&:hover{
+				background: #30c524;
+			}
+		}
+	}
+}

@@ -26,9 +26,107 @@ body
 										input#tab-nav-1(type='radio', name='tabs')
 										label(for='tab-nav-1') Завершённые
 								.col-lg-3.col-md-5.col-sm-6.col-xs-12.np
-									.tabbed__wrap
+									.tabbed__wrap.tabbed__wrap__checked
 										input#tab-nav-2(type='radio', name='tabs', checked='')
 										label(for='tab-nav-2') Прогноз
+					.row
+						//- Состояния карточек
+						//- Ожидается
+						.col-lg-3.col-md-3.col-sm-6.col-xs-12
+							.card-wrapper
+								.card-disable.card-default
+									.card-top
+										img(src="../img/card-example.jpg", alt="image", width="270px", height="184px", class="card-top__img")
+										.card-top__day
+											|4 августа
+									.card-middle
+										.card-middle__title
+											|Автохолодильники и аккумуляторы холода
+										.card-middle__sale
+											|-15%
+										.card-middle__promocode
+									.card-bottom
+										a(href="#", target="_blank", class="card-bottom__link")
+											span Перейти к покупке
+
+						//- Активная
+						.col-lg-3.col-md-3.col-sm-6.col-xs-12
+							.card-wrapper
+								.card-active.card-default
+									.card-top
+										img(src="../img/card-example.jpg", alt="image", width="270px", height="184px", class="card-top__img")
+										.card-top__day
+											|4 августа
+									.card-middle
+										.card-middle__title
+											|Автохолодильники и аккумуляторы холода
+										.card-middle__sale
+											|-15%
+										.card-middle__promocode
+											|Промокод: 
+											span 4августа
+									.card-bottom
+										a(href="#", target="_blank", class="card-bottom__link") 
+											span Перейти к покупке
+
+
+
+
+						.col-lg-3.col-md-3.col-sm-6.col-xs-12
+							.card__wrapper
+								.card__disable.card__default
+									.card__number
+										|16
+									.card__day
+										|понедельник
+									.card__sale
+										span -30%
+									.card__icon
+									.card__category
+										|декоративная косметика
+									a(href="#", target="_blank", class="card__link")
+										|Ожидается
+						.col-lg-3.col-md-3.col-sm-6.col-xs-12
+							.card__wrapper
+								.card__active.card__default
+									.card__number
+										|13
+									.card__day
+										|понедельник
+									.card__sale
+										span -30%
+									.card__icon
+										img(src="../img/card__icon.png", alt="")
+									.card__category
+										|декоративная косметика
+									a(href="#", target="_blank", class="card__link")
+										|перейти к покупкам>
+						.col-lg-3.col-md-3.col-sm-6.col-xs-12
+							.card__wrapper
+								.card__completed.card__default
+									.completed
+										|завершено
+									.card__number
+										|10
+									.card__day
+										|понедельник
+									.card__sale
+										span -30%
+									.card__icon
+									.card__category
+										|декоративная косметика
+						.col-lg-3.col-md-3.col-sm-6.col-xs-12
+							.card__wrapper
+								.card__empty.card__default
+									.card__number
+										|15
+									.card__day
+										|понедельник
+									.card__icon
+									.card__category
+										|скидки
+										br
+										|затаились
 
 		
 			
