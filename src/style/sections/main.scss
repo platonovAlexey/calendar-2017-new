@@ -1,11 +1,21 @@
 .main{
 	background: #f7f7f7;
+
 }
 
 .make__section{
 	position: relative;
 	@include clearfix;
-	background-color: #fff;
+	background-color: #f7f7f7;
+	&:before{
+		content: "";
+		display: block;
+		width: 100%;
+		background:url(../img/main-before.png)no-repeat;
+		height: 352px;
+		position: absolute;
+		top: 246px;
+	}
 }
 
 .np{
@@ -35,7 +45,7 @@
 	position: relative;
 	@include clearfix;
 	padding: 40px 0;
-	background-color: #fff;
+	background-color: #f7f7f7;
 	@include MQ(xs){
 		padding: 0;
 	}
@@ -162,7 +172,7 @@
 	padding: 10px 00px;
 	cursor: pointer;
 	transition: background-color .3s;
-	color: #337bf2;
+	color: #46a6e3;
 	text-align: center;
 	background: #ffffff;
 	font-size: 18px;
@@ -175,7 +185,7 @@
 }
 
 .tabbed__wrap > input:checked + label {
-	background: #337bf2;
+	background: #46a6e3;
 	color: #ffffff;
 	text-align: center;
 	transition: 1s all;
@@ -184,7 +194,7 @@
 }
 
 .tabbed__wrap > label:hover{
-	background: #337bf2;
+	background: #46a6e3;
 	color: #ffffff;
 	text-align: center;
 	transition: 1s all;

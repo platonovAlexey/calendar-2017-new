@@ -60,7 +60,7 @@
 .header{
 	position: relative;
 	background: #5243e4 url(../img/header-bg.jpg)no-repeat center center;
-	min-height: 600px;
+	min-height: 598px;
 	&-title{
 		font-family: 'SegoeUI', 'Roboto', sans-serif;
 		font-size: 72px;
@@ -76,6 +76,28 @@
 			font-size: 18px;
 			font-weight: 300;
 			color: #fff;
+			position: relative;
+			z-index: 101;
+			margin-bottom: 70px;
+		}
+		&__btn{
+			font-family: 'SegoeUILight', 'Roboto', sans-serif;
+			font-size: 18px;
+			color: #fff;
+			text-align: center;
+			border-radius: 25px;
+			border:1px solid #fff;
+			padding: 12px 65px;
+			display: inline-block;
+			position: relative;
+			z-index: 110;
+			transition:1s all;
+			&:hover{
+				transition:1s all;
+				background: #fff;
+				border:1px solid #fff;
+				color: #46a6e3;
+			}
 		}
 	}
 }

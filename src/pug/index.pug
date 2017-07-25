@@ -15,59 +15,93 @@ body
 							span скидок
 						.header-title__text
 							|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-		main.main
-			.container__inner
-				.container-fluid
-					.tabbed
-						.container
-							.row
-								.col-lg-3.col-lg-offset-5.col-md-5.col-md-offset-1.col-sm-6.col-xs-12.np
-									.tabbed__wrap
-										input#tab-nav-1(type='radio', name='tabs')
-										label(for='tab-nav-1') Завершённые
-								.col-lg-3.col-md-5.col-sm-6.col-xs-12.np
-									.tabbed__wrap.tabbed__wrap__checked
-										input#tab-nav-2(type='radio', name='tabs', checked='')
-										label(for='tab-nav-2') Прогноз
+						a(href="#", class="header-title__btn") Как это работает?
+		section.make__section
+			.tabbed
+				.container
 					.row
-						//- Состояния карточек
-						//- Ожидается
-						.col-lg-3.col-md-3.col-sm-6.col-xs-12
-							.card-wrapper
-								.card-disable.card-default
-									.card-top
-										img(src="../img/card-example.jpg", alt="image", width="270px", height="184px", class="card-top__img")
-										.card-top__day
-											|4 августа
-									.card-middle
-										.card-middle__title
-											|Автохолодильники и аккумуляторы холода
-										.card-middle__sale
-											|-15%
-										.card-middle__promocode
-									.card-bottom
-										a(href="#", target="_blank", class="card-bottom__link")
-											span Перейти к покупке
+						.col-lg-3.col-lg-offset-5.col-md-5.col-md-offset-1.col-sm-6.col-xs-12.np
+							.tabbed__wrap
+								input#tab-nav-1(type='radio', name='tabs')
+								label(for='tab-nav-1') Завершённые
+						.col-lg-3.col-md-5.col-sm-6.col-xs-12.np
+							.tabbed__wrap.tabbed__wrap__checked
+								input#tab-nav-2(type='radio', name='tabs', checked='')
+								label(for='tab-nav-2') Прогноз
+		.tabs__wrapper.tabs__wrapper__online
+			main.main
+			.container
+				- var date = new Date();
 
-						//- Активная
-						.col-lg-3.col-md-3.col-sm-6.col-xs-12
-							.card-wrapper
-								.card-active.card-default
-									.card-top
-										img(src="../img/card-example.jpg", alt="image", width="270px", height="184px", class="card-top__img")
-										.card-top__day
-											|4 августа
-									.card-middle
-										.card-middle__title
-											|Автохолодильники и аккумуляторы холода
-										.card-middle__sale
-											|-15%
-										.card-middle__promocode
-											|Промокод: 
-											span 4августа
-									.card-bottom
-										a(href="#", target="_blank", class="card-bottom__link") 
-											span Перейти к покупке
+				each item, number in cards
+					if ((number % 5) == 0)
+						each item, j in cards.slice(number, number+5)
+							+grid-3()
+								+active-cards(item)
+		.tabs__wrapper.tabs__wrapper__offline
+			main.main
+				.container
+					- var date = new Date();
+					each item, number in cards
+						if ((number % 5) == 0)
+							.row
+								each item, j in cards.slice(number, number+5)
+									+grid-3()
+										+active-cards(item)
+
+		//- main.main
+		//- 	.container__inner
+		//- 		.container-fluid
+		//- 			.tabbed
+		//- 				.container
+		//- 					.row
+		//- 						.col-lg-3.col-lg-offset-5.col-md-5.col-md-offset-1.col-sm-6.col-xs-12.np
+		//- 							.tabbed__wrap
+		//- 								input#tab-nav-1(type='radio', name='tabs')
+		//- 								label(for='tab-nav-1') Завершённые
+		//- 						.col-lg-3.col-md-5.col-sm-6.col-xs-12.np
+		//- 							.tabbed__wrap.tabbed__wrap__checked
+		//- 								input#tab-nav-2(type='radio', name='tabs', checked='')
+		//- 								label(for='tab-nav-2') Прогноз
+		//- 			.row
+		//- 				//- Состояния карточек
+		//- 				//- Ожидается
+		//- 				.col-lg-3.col-md-3.col-sm-6.col-xs-12
+		//- 					.card-wrapper
+		//- 						.card-disable.card-default
+		//- 							.card-top
+		//- 								img(src="../img/card-example.jpg", alt="image", width="270px", height="184px", class="card-top__img")
+		//- 								.card-top__day
+		//- 									|4 августа
+		//- 							.card-middle
+		//- 								.card-middle__title
+		//- 									|Автохолодильники и аккумуляторы холода
+		//- 								.card-middle__sale
+		//- 									|-15%
+		//- 								.card-middle__promocode
+		//- 							.card-bottom
+		//- 								a(href="#", target="_blank", class="card-bottom__link")
+		//- 									span Перейти к покупке
+
+		//- 				//- Активная
+		//- 				.col-lg-3.col-md-3.col-sm-6.col-xs-12
+		//- 					.card-wrapper
+		//- 						.card-active.card-default
+		//- 							.card-top
+		//- 								img(src="../img/card-example.jpg", alt="image", width="270px", height="184px", class="card-top__img")
+		//- 								.card-top__day
+		//- 									|4 августа
+		//- 							.card-middle
+		//- 								.card-middle__title
+		//- 									|Автохолодильники и аккумуляторы холода
+		//- 								.card-middle__sale
+		//- 									|-15%
+		//- 								.card-middle__promocode
+		//- 									|Промокод: 
+		//- 									span 4августа
+		//- 							.card-bottom
+		//- 								a(href="#", target="_blank", class="card-bottom__link") 
+		//- 									span Перейти к покупке
 
 
 
