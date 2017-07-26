@@ -7,15 +7,7 @@
 	position: relative;
 	@include clearfix;
 	background-color: #f7f7f7;
-	&:before{
-		content: "";
-		display: block;
-		width: 100%;
-		background:url(../img/main-before.png)no-repeat;
-		height: 352px;
-		position: absolute;
-		top: 246px;
-	}
+	
 }
 
 .np{

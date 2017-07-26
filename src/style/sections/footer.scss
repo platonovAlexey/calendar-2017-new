@@ -1,12 +1,13 @@
 .footer{
 	flex: 0 0 auto;
 	position: relative;
-	padding-bottom: 30px;
-	background: #f7f7f7;
+	padding: 70px 0;
+	background: #ffffff;
 		&__text{
+		font-family: 'SegoeUIRegular', 'Roboto', sans-serif;
 		font-size: 16px;
-		color: $footerText;
-		text-align: left;
+		color: #9c9c9c;
+		text-align: center;
 		a{
 			font-size: 16px;
 			color: $footerText;

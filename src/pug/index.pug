@@ -16,6 +16,13 @@ body
 						.header-title__text
 							|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 						a(href="#", class="header-title__btn") Как это работает?
+					.col-lg-offset-3.col-lg-3.col-md-offset-2.col-md-3
+						.card-everyday-wrapper
+							each item, number in cards
+								if ((number % 5) == 0)
+									each item, j in cards.slice(number, number+5)
+										.col-lg-18
+											+active-cards(item)
 		section.make__section
 			.tabbed
 				.container
@@ -48,6 +55,18 @@ body
 								each item, j in cards.slice(number, number+5)
 									+grid-3()
 										+active-cards(item)
+
+		div(id="modal-form", class="modal-form")
+			span#modal-close
+			.modal__wrapper
+				.modal-title__wrapper
+					h2.modal-title
+						|Блабла
+					.modal-title__text
+						|БлаблаБлаблаБлабла.
+
+		#overlay
+		#toTop
 
 		//- main.main
 		//- 	.container__inner

@@ -9,3 +9,5 @@
  * Custom
  */
 //= modules/app.js
+//= modules/popup.js
+//= modules/btnUp.js

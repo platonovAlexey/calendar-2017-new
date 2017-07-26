@@ -17,7 +17,8 @@ $('[id^="cards_"]').each(function() {
 		date = new Date(date.setHours(16));
 		forecast = $('.tabs__wrapper__online');
 		completed = $('.tabs__wrapper__offline');
-		col = $('.col-lg-3.col-md-3.col-sm-6.col-xs-12');
+		col = $('.col-lg-3.col-md-3.col-sm-6.col-xs-15');
+		everyday = $('.card-everyday-wrapper');
 		console.log(format(now));
 		console.log($(this).attr('data'));
 			
@@ -68,6 +69,20 @@ console.log(format(date), 'будущее')
 		$(this).find(".card-bottom__link").html("Ожидается");
 
 		completed.find(col).find('.card-default').parent().parent().remove();
+
+		// var everyDays = everyday.find('.col-lg-18').find('.card-wrapper').find('.card-disable').addClass('card-active');
+		// everyDays.addClass(function(index) {
+		// 	return "item-" + index;
+		// });
+
+		var every = everyday.find('.card-default:first').addClass('card-everyday').addClass('card-active').removeClass('card-disable');
+		var nextEvery = everyday.find('.card-disable').addClass('active1');
+		if ($(this).hasClass('active1')) {
+			$(this).parent().parent().remove();
+		}
+		// if (every.hasClass('bla')) {
+		// 	$(this).addClass('card-active');
+		// }
 
 		//completed.find('.card-completed').css("display", "none");
 		// completed.find('.card-default').css("display", "none");
@@ -124,3 +139,4 @@ linkOffline.click(function(){
 	forecast.css('display', 'none');
 	completed.css('display', 'block');
 });
+

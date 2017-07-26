@@ -61,12 +61,22 @@
 	position: relative;
 	background: #5243e4 url(../img/header-bg.jpg)no-repeat center center;
 	min-height: 598px;
+	&:before{
+		content: "";
+		display: block;
+		width: 100%;
+		background:url(../img/main-before.png)no-repeat;
+		height: 352px;
+		position: absolute;
+		top: 246px;
+	}
 	&-title{
 		font-family: 'SegoeUI', 'Roboto', sans-serif;
 		font-size: 72px;
 		color: #fff;
 		font-weight: 300;
 		margin: 0 0 40px 0;
+		line-height: 1;
 		span{
 			font-family: 'SegoeUI', 'Roboto', sans-serif;
 			font-weight: 600;
@@ -98,6 +108,13 @@
 				border:1px solid #fff;
 				color: #46a6e3;
 			}
+			&:focus{
+				background: #fff;
+				border:1px solid #fff;
+				color: #46a6e3;
+				text-decoration: none;
+				outline: none;
+			}
 		}
 	}
 }
@@ -107,13 +124,6 @@
 	margin: 0 auto;
 }
 
-.header__title{
-	font-size: 66px;
-	color:#fff;
-	font-weight: bold;
-	text-transform: uppercase;
-}
-
 .title{
 	font-size: em($h1FZ);
 }
@@ -121,3 +131,59 @@
 .title__desc{
 	font-size: em($h1desc);
 }
+
+.card-everyday-wrapper{
+	position: relative;
+	height: 440px;
+}
+
+.card-everyday{
+	position: relative;
+	&:before{
+		content: "Скидка дня";
+		display: block;
+		font-family: 'SegoeUISemiBold', 'Roboto', sans-serif;
+		width: 150px;
+		height: 35px;
+		color: #fb736d;
+		background-color: #fefefe;
+		position: absolute;
+		z-index: 100;
+		top: -35px;
+		text-align: center;
+		line-height: 35px;
+		border-top-right-radius: 5px;
+		border-top-left-radius: 5px;
+	}
+}
+
+.card-everyday-wrapper .col-lg-18 .card-wrapper{
+	overflow: visible !important;
+}
+
+
+#toTop {
+	width:55px;
+	height: 55px;
+	border-width: 1px;
+	border-color: rgb(255, 255, 255);
+	border-style: solid;
+	border-radius: 50%;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0px 5px 13px 0px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	z-index: 3;
+	position:fixed;
+	bottom:50px;
+	right:150px;
+	display: none;
+	&:before{
+		content: "";
+		display: block;
+		width: 26px;
+		height: 14px;
+		background: url(../img/arr-top.png)no-repeat;
+		margin: 17px auto 0 auto;
+	}
+}
+

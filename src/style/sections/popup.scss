@@ -1,0 +1,92 @@
+#modal-form {
+    width: 50%;
+    background: #ebebeb;
+    background-size: cover;
+    top: 45%;
+    left: 32%;
+    margin-top: -150px;
+    margin-left: -150px;
+    opacity: 0;
+    z-index: 2000000;
+    height: 420px !important;
+}
+
+#modal-form #modal-close {
+    position: relative;
+    float: right;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    display: block;
+    z-index: 10;
+    width: 0;
+    height: 0;
+}
+
+.modal__wrapper {
+    position: relative;
+    //padding: 0 40px;
+}
+
+#overlay {
+    opacity: .8;
+    width: 100%;
+}
+
+#modal-form, #overlay {
+    position: fixed;
+    display: none;
+    height: 100%;
+}
+
+#overlay {
+    z-index: 30;
+    background-color: rgba(0,0,0,.8);;
+    filter: alpha(opacity=80);
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+#modal_form__img__mob {
+    width: 100%;
+    background-size: cover;
+    left: 36%;
+    display: none;
+    opacity: 0;
+    overflow: scroll;
+}
+
+#modal-form #modal-close {
+    position: relative;
+    right: 40px;
+    top: 20px;
+    cursor: pointer;
+    display: block;
+    z-index: 10;
+    width: 0;
+    height: 0;
+}
+
+#modal-form #modal-close:before{
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: url(https://fast.ulmart.ru/ns/verstka/more_love/img/close-modal.png) no-repeat;
+    top: 15px;
+    right: 15px;
+}
+
+.modal-title{
+	font-size: 1.875em;
+	color: #000;
+	text-align: center;
+	font-weight: 700;
+}
+
+.modal-title__text{
+	font-size: 14px;
+	color: #000;
+	text-align: center;
+}
