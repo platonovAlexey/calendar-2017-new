@@ -52,6 +52,9 @@
 			height: 44px;
 			margin-bottom: 20px;
 			line-height: 44px;
+			span{
+				font-size: 40px;
+			}
 		}
 		&__promocode{
 			font-size: 14px;
@@ -132,6 +135,9 @@
 			height: 44px;
 			margin-bottom: 20px;
 			line-height: 44px;
+			span{
+				font-size: 40px;
+			}
 		}
 		&__promocode{
 			font-size: 14px;
@@ -168,22 +174,27 @@
 	}
 }
 
-.card-default:hover:after{
-	transition:.5s all;
-	height: 55%;
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	background: rgba(255,255,255,.5);
-	display: block;
-	@include MQ(sm){
-		display: none;
-	}
-}
+// .card-default:hover:after{
+// 	transition:.5s all;
+// 	height: 55%;
+// 	position: absolute;
+// 	left: 0;
+// 	bottom: 0;
+// 	background: rgba(255,255,255,.5);
+// 	display: block;
+// 	@include MQ(sm){
+// 		display: none;
+// 	}
+// }
 
 .card-disable:hover .card-top{
-	transition:all .3s;
+	transition:all .1s;
 	filter:none;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.card-disable:hover .card-middle__sale{
+	color: #ff7719;
 }
 
 .card-active{
@@ -228,6 +239,9 @@
 			height: 44px;
 			margin-bottom: 20px;
 			line-height: 44px;
+			span{
+				font-size: 40px;
+			}
 		}
 		&__promocode{
 			font-size: 14px;
@@ -322,6 +336,9 @@
 			height: 44px;
 			margin-bottom: 20px;
 			line-height: 44px;
+			span{
+				font-size: 40px;
+			}
 		}
 		&__promocode{
 			font-size: 14px;
