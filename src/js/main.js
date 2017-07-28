@@ -9,5 +9,6 @@
  * Custom
  */
 //= modules/app.js
+//= modules/cardsHeader.js
 //= modules/popup.js
 //= modules/btnUp.js

@@ -27,9 +27,9 @@ $('[id^="cards_"]').each(function() {
 		if (date < now) {
 console.log(format(date), 'прошлое')
 		// Это прошлые даты
-		$(this).addClass('card-completed').css("display", "block");
+		$(this).addClass('card-completed');
 		//$(this).addClass('card-disaeble').css("display", "block");
-		$(this).addClass('card-active').css("display", "block");
+		$(this).addClass('card-active');
 		// $(this).removeClass('card__disable');
 		//$(this).removeClass('card-active');
 		//$(this).removeClass('card-default');
@@ -51,7 +51,7 @@ console.log(format(date), 'прошлое')
 		completed.find('.card-default').removeClass('card-active');
 
 		
-
+		// var everyDaysOld = everyday.find('.col-lg-18').find('.card-wrapper').find('.card-default').addClass('card-old');
 		
 		
 		
@@ -84,7 +84,7 @@ console.log(format(date), 'будущее')
 
 		//completed.find('.card-completed').css("display", "none");
 		// completed.find('.card-default').css("display", "none");
-		
+		// var everyDaysFuture = everyday.find('.col-lg-18').find('.card-wrapper').find('.card-default').addClass('card-future');
 
 		}
 
@@ -93,37 +93,11 @@ console.log(format(date), 'сегодня')
 		$(this).removeClass('card-completed');
 		//$(this).removeClass('card-default');
 		//$(this).removeClass('card-disable');
-		$(this).addClass('card-active');
+		$(this).parent().parent().remove();
 		$(this).find(".card-bottom__link").html("Перейти к покупке");
 		//$(this).find(".completed").remove();
 		$(this).find(".card-middle__promocode").css("display", "block");
 		//$(this).find(".card__link").css("fontSize", 14 );
-
-
-
-
-
-		// var everyDays = everyday.find('.col-lg-18').find('.card-wrapper').find('.card-default').addClass('card-active');
-		// everyDays.removeClass('card-completed');
-		// everyDays.removeClass('card-default');
-
-		// everyday.find('.col-lg-18').find('.card-wrapper').find('.card-active').css("display", "block");
-
-		// everyDays.removeClass('card-disable');
-
-
-		// everyDays.addClass(function(index) {
-		// 	return "item-" + index;
-		// });
-
-		// var every = everyday.find('.card-default:first').addClass('card-everyday').addClass('card-active').removeClass('card-disable');
-		// var nextEvery = everyday.find('.card-disable').addClass('active1');
-		// if ($(this).hasClass('active1')) {
-		// 	$(this).parent().parent().remove();
-		// }
-		// if (every.hasClass('bla')) {
-		// 	$(this).addClass('card-active');
-		// }
 
 
 
