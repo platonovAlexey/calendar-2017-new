@@ -9,14 +9,19 @@ body
 			.container__inner
 				+top-line()
 				.header-title-wrapper
-					.col-lg-6.col-md-10.col-sm-18.col-xs-18
+					.col-lg-7.col-md-7.col-sm-7.col-xs-15
 						h1.header-title
 							|Прогноз 
 							span скидок
 						.header-title__text
-							|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-						a(href="#", class="header-title__btn") Как это работает?
-					.col-lg-offset-3.col-lg-3.col-md-offset-2.col-md-3
+							|В начале каждого месяца мы публикуем расписание скидок на самые разные товары в формате календаря. Это уникальные предложения, которые действуют всего один день.
+							br
+							|Чтобы приобрести товар по специальной цене, вам необходимо дождаться дня действия акции и перейти к выбору товара из «карточки дня». 
+							br
+							|Обратите внимание, что на большинство товаров скидка предоставляется по промокоду. По всем вопросам вы можете связаться с нами через колл-центр, либо форму обратной связи на сайте 
+							a(href="https://www.ulmart.ru/", class="modal-title__link", target="_blank") ulmart.ru
+						//- a(href="#", class="header-title__btn") Как это работает?
+					.col-lg-offset-3.col-lg-3.col-md-offset-3.col-md-3.col-sm-offset-1.col-sm-5.col-xs-15
 						.card-everyday-wrapper
 							each item, number in cards
 								if ((number % 1) == 0)
@@ -25,26 +30,26 @@ body
 											+active-cards-header(item)
 		section.make__section
 			.tabbed
-				.container
+				.container-fluid
 					.row
-						.col-lg-3.col-lg-offset-5.col-md-5.col-md-offset-1.col-sm-6.col-xs-12.np
+						.col-lg-3.col-lg-offset-5.col-md-7.col-sm-offset-1.col-sm-7.col-md-offset-1.col-xs-15.np
 							.tabbed__wrap
 								input#tab-nav-1(type='radio', name='tabs')
 								label(for='tab-nav-1') Завершённые
-						.col-lg-3.col-md-5.col-sm-6.col-xs-12.np
+						.col-lg-3.col-md-7.col-sm-7.col-xs-15.np
 							.tabbed__wrap.tabbed__wrap__checked
 								input#tab-nav-2(type='radio', name='tabs', checked='')
 								label(for='tab-nav-2') Прогноз
 		.tabs__wrapper.tabs__wrapper__online
 			main.main
-			.container
-				- var date = new Date();
+				.container
+					- var date = new Date();
 
-				each item, number in cards
-					if ((number % 5) == 0)
-						each item, j in cards.slice(number, number+5)
-							+grid-3()
-								+active-cards(item)
+					each item, number in cards
+						if ((number % 5) == 0)
+							each item, j in cards.slice(number, number+5)
+								+grid-3()
+									+active-cards(item)
 		.tabs__wrapper.tabs__wrapper__offline
 			main.main
 				.container
@@ -61,9 +66,17 @@ body
 			.modal__wrapper
 				.modal-title__wrapper
 					h2.modal-title
-						|Блабла
+						|Как это работает ?
 					.modal-title__text
-						|БлаблаБлаблаБлабла.
+						|В начале каждого месяца мы публикуем список категорий и скидок на них в формате календаря. Это уникальные предложения, которые действуют всего один день.
+					.modal-title__text
+						|Вы сразу можете увидеть в какой день и на какую категорию товаров мы подготовили спецпредложение. Чтобы принять участие в акции, вам необходимо дождаться дня действия акции и перейти в каталог товаров кликнув на активную «карточку дня».
+					.modal-title__text
+						|Обратите внимание, в определенные дни скидка предоставляется по промокоду (в таком случае, он указан в активной «карточке дня»). По всем возникшим вопросам вы можете связаться с нами через колл-центр, либо форму обратной связи на сайте 
+						a(href="https://www.ulmart.ru/", class="modal-title__link", target="_blank") ulmart.ru
+						|.
+						br
+						|Удачных и выгодных покупок!
 
 		#overlay
 		#toTop

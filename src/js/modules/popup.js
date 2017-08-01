@@ -1,7 +1,7 @@
 $(".header-title__btn").click(function(t) {
     t.preventDefault(); 
     $("#overlay").fadeIn(400, function() {
-    	console.log('click');
+    	// console.log('click');
         $("#modal-form").css("display", "block").animate({
             opacity: 1,
             top: "30%"

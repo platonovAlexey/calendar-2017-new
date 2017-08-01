@@ -14,6 +14,7 @@
 			text-align: center;
 			margin-left: 0;
 			margin-top: 15px;
+			margin-bottom: 15px;
 		}
 	}
 	&__shop{
@@ -55,17 +56,20 @@
 	@include clearfix;
 	padding-top: 90px;
 	text-align: left;
+	@include MQ(xs){
+		padding-top: 30px;
+	}
 }
 
 .header{
 	position: relative;
-	background: #5243e4 url(../img/header-bg.jpg)no-repeat center center;
+	background: #52b2dd url(https://fast.ulmart.ru/ns/verstka/calendar_2017_august/img/header-bg.jpg)no-repeat center center;
 	min-height: 598px;
 	&:before{
 		content: "";
 		display: block;
 		width: 100%;
-		background:url(../img/main-before.png)no-repeat;
+		background:url(https://fast.ulmart.ru/ns/verstka/calendar_2017_august/img/main-before.png)no-repeat;
 		height: 352px;
 		position: absolute;
 		top: 246px;
@@ -83,12 +87,20 @@
 		}
 		&__text{
 			font-family: 'SegoeUI', 'Roboto', sans-serif;
-			font-size: 18px;
+			font-size: 16px;
 			font-weight: 300;
 			color: #fff;
 			position: relative;
 			z-index: 101;
 			margin-bottom: 70px;
+			line-height: 1.6;
+			a{
+				color: #fff;
+				&:hover{
+					text-decoration: none;
+					color: #fff;
+				}
+			}
 		}
 		&__btn{
 			font-family: 'SegoeUILight', 'Roboto', sans-serif;
@@ -135,6 +147,7 @@
 .card-everyday-wrapper{
 	position: relative;
 	height: 440px;
+	width: 263px;
 }
 
 .card-everyday{
@@ -142,7 +155,7 @@
 	&:before{
 		content: "Скидка дня";
 		display: block;
-		font-family: 'SegoeUISemiBold', 'Roboto', sans-serif;
+		
 		width: 150px;
 		height: 35px;
 		color: #fb736d;
@@ -157,8 +170,27 @@
 	}
 }
 
+.card-sale-day{
+	font-family: 'SegoeUISemiBold', 'Roboto', sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	color: #fb736d;
+	text-transform: uppercase;
+	text-align: center;
+	width: 148px;
+	height: 36px;
+	background: #fefefe;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	position: absolute;
+	z-index: 100;
+	line-height: 36px;
+	top: -36px;
+}
+
 .card-everyday-wrapper .col-lg-18 .card-wrapper{
 	overflow: visible !important;
+	margin-bottom: 85px;
 }
 
 
@@ -182,7 +214,7 @@
 		display: block;
 		width: 26px;
 		height: 14px;
-		background: url(../img/arr-top.png)no-repeat;
+		background: url(https://fast.ulmart.ru/ns/verstka/calendar_2017_august/img/arr-top.png)no-repeat;
 		margin: 17px auto 0 auto;
 	}
 }

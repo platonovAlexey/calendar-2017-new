@@ -2,17 +2,77 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1600px) {
+	#toTop{
+		right: 20px;
+	}
+	.tabbed{
+		margin: 50px 0px 50px 0px;
+	}
+	.header:before{
+		display: none;
+	}
+	.header-title-wrapper{
+		padding-top: 45px;
+	}
+}
+
+@media only screen and (max-width : 1450px) {
+	.main .container .row > .col-lg-3.col-md-4.col-sm-6.col-xs-15{
+		width: 17%;
+	}
+	.header:before{
+		display: none;
+	}
+	.card-disable .card-bottom__link{
+		padding: 12px 30px;
+	}
 
 }
 
-@media only screen and (max-width : 1200px) {
+@media only screen and (min-width : 1200px) and (max-width: 1300px) {
+	.card-disable .card-top__img, .card-default .card-top__img{
+		height: auto;
+	}
+	.card-wrapper{
+		height: 390px;
+	}
+	.card-everyday-wrapper .col-lg-18 .card-wrapper{
+		height: 440px;
+	}
+}
 
+@media only screen and (max-width : 1200px){
+	.header-title-wrapper{
+		padding-top: 40px;
+	}
+	.header-title__text{
+		margin-bottom: 40px;
+	}
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-
+	.main .container .row > .col-lg-3.col-md-4.col-sm-6.col-xs-15{
+		width: 26.66666667%;
+	}
+	
+	.header-title__text{
+		margin-bottom: 20px;
+	}
+	.header-title__btn{
+		margin-bottom: 50px;
+	}
+	.header-title{
+		margin-bottom: 20px;
+	}
+	.header-title{
+		font-size: 55px;
+	}
+	.header-title__btn, .header-title__text{
+		font-size: 16px;
+	}
 }
+
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
@@ -39,6 +99,25 @@
 		animation: none !important;
 	}
 
+	.col-lg-3.col-md-4.col-sm-7.col-xs-15{
+		width: 50%;
+	}
+	.tabbed__wrap__checked{
+		left: 0;
+	}
+
+	.header-title{
+		font-size: 44px;
+	}
+}
+
+@media only screen and (max-width : 767px){
+	.header{
+		background: #52b2dd;
+	}
+	.card-everyday-wrapper{
+		margin: 0 auto;
+	}
 }
 
 @media only screen and (max-width : 600px){
@@ -47,6 +126,27 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
+	.header-title{
+		font-size: 36px;
+	}
+	.header-title__btn, .header-title__text{
+		font-size: 14px;
+	}
+	.header-title__btn{
+		display: block;
+	}
+	#toTop{
+		right: 0;
+	}
+	.col-lg-3.col-md-4.col-sm-7.col-xs-15{
+		width: 100%;
+	}
+	.header-title-wrapper{
+		padding-top: 10px;
+	}
+	.header-title__text{
+		margin-bottom: 50px;
+	}
 
 }
 

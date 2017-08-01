@@ -9,9 +9,10 @@
     opacity: 0;
     z-index: 2000000;
     height: 420px !important;
+    padding: 50px;
 }
 
-#modal-form #modal-close {
+#modal-close {
     position: relative;
     float: right;
     top: 0;
@@ -58,7 +59,7 @@
 }
 
 #modal-form #modal-close {
-    position: relative;
+    position: absolute;
     right: 40px;
     top: 20px;
     cursor: pointer;
@@ -83,10 +84,19 @@
 	color: #000;
 	text-align: center;
 	font-weight: 700;
+    margin-bottom: 20px;
+    &__text{
+    font-size: 16px;
+    color: #000;
+    text-align: left; 
+    }
+    &__link{
+        color: #000;
+        text-decoration: underline;
+        &:hover{
+            color: #000;
+            text-decoration: none;
+        }
+    }
 }
 
-.modal-title__text{
-	font-size: 14px;
-	color: #000;
-	text-align: center;
-}

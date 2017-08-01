@@ -13,12 +13,12 @@ $('[id^="cards-item-"]').each(function() {
 	everyday = $('.card-everyday-wrapper');
 
 	if (date1 < now1) {
-		console.log(format1(date1), 'прошлое в хедер');
+		// console.log(format1(date1), 'прошлое в хедер');
 		$(this).removeClass('card-active');
 		$(this).addClass('card-completed');
 		$(this).parent().parent().remove();
 	} else if(format1(now1) !== $(this).attr('datahead')) {
-		console.log(format1(date1), 'будущее хедер');
+		// console.log(format1(date1), 'будущее хедер');
 		$(this).removeClass('card-active');
 		$(this).removeClass('card-completed');
 		$(this).addClass('card-disable');
@@ -29,7 +29,7 @@ $('[id^="cards-item-"]').each(function() {
 // }
 
 if(format1(now1) === $(this).attr('datahead')) {
-	console.log(format1(date1), 'сегодня хедер');
+	// console.log(format1(date1), 'сегодня хедер');
 	$(this).removeClass('card-completed');
 	$(this).addClass('card-active');
 	$(this).find(".card-bottom__link").html("Перейти к покупке");

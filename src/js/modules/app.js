@@ -17,15 +17,15 @@ $('[id^="cards_"]').each(function() {
 		date = new Date(date.setHours(20)); //16
 		forecast = $('.tabs__wrapper__online');
 		completed = $('.tabs__wrapper__offline');
-		col = $('.col-lg-3.col-md-3.col-sm-6.col-xs-15');
+		col = $('.col-lg-3.col-md-4.col-sm-7.col-xs-15');
 		everyday = $('.card-everyday-wrapper');
-		console.log(format(now));
-		console.log($(this).attr('data'));
+		// console.log(format(now));
+		// console.log($(this).attr('data'));
 			
 
 
 		if (date < now) {
-console.log(format(date), 'прошлое')
+// console.log(format(date), 'прошлое')
 		// Это прошлые даты
 		$(this).addClass('card-completed');
 		//$(this).addClass('card-disaeble').css("display", "block");
@@ -37,6 +37,7 @@ console.log(format(date), 'прошлое')
 		// $(this).append('<div class="card-bottom__link">Завершено</div>');
 		$(this).find(".card-bottom__link").html("Завершено");
 		$(this).find(".card-middle__promocode").html("");
+		$(this).find(".card-top__day span").html("");
 
 		forecast.find(col).find('.card-completed').parent().parent().remove();
 
@@ -63,7 +64,7 @@ console.log(format(date), 'прошлое')
 
 		} else if(format(now) !== $(this).attr('data')) {
 
-console.log(format(date), 'будущее')
+// console.log(format(date), 'будущее')
 		$(this).removeClass('card-completed');
 		$(this).removeClass('card-active');
 		$(this).removeClass('card-disable');
@@ -89,7 +90,7 @@ console.log(format(date), 'будущее')
 		}
 
 if(format(now) === $(this).attr('data')) {
-console.log(format(date), 'сегодня')
+// console.log(format(date), 'сегодня')
 		$(this).removeClass('card-completed');
 		//$(this).removeClass('card-default');
 		//$(this).removeClass('card-disable');
@@ -113,12 +114,12 @@ var tabWrapper = $('.tabs__wrapper');
 
 
 linkOnline.click(function(){
-	console.log('click online');
+	// console.log('click online');
 	completed.css('display', 'none');
 	forecast.css('display', 'block');
 });
 linkOffline.click(function(){
-	console.log('click offline');
+	// console.log('click offline');
 	forecast.css('display', 'none');
 	completed.css('display', 'block');
 });
