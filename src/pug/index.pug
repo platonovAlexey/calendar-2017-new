@@ -34,11 +34,11 @@ body
 					.row
 						.col-lg-3.col-lg-offset-5.col-md-7.col-sm-offset-1.col-sm-7.col-md-offset-1.col-xs-15.np
 							.tabbed__wrap
-								input#tab-nav-1(type='radio', name='tabs')
+								input#tab-nav-1(type='radio', name='tabs', onclick="pushStateToDataLayerCLNDR2017Tabs(event) ('CLNDR2017Tabs', 'completedTabs')")
 								label(for='tab-nav-1') Завершённые
 						.col-lg-3.col-md-7.col-sm-7.col-xs-15.np
 							.tabbed__wrap.tabbed__wrap__checked
-								input#tab-nav-2(type='radio', name='tabs', checked='')
+								input#tab-nav-2(type='radio', name='tabs', checked='', onclick="pushStateToDataLayerCLNDR2017Tabs(event) ('CLNDR2017Tabs', 'currentTabs')")
 								label(for='tab-nav-2') Прогноз
 		.tabs__wrapper.tabs__wrapper__online
 			main.main

@@ -1,4 +1,4 @@
-console.log('Карточки в хедере');
+// console.log('Карточки в хедере');
 
 var format1 = function (date1) {
 	var month1 = (date1.getMonth() + 1).toString();
@@ -9,7 +9,7 @@ $('[id^="cards-item-"]').each(function() {
 	var date1 = new Date($(this).attr('datahead')),
 	now1 = new Date();
 	day1 = now1.getDay();
-	date1 = new Date(date1.setHours(20)); //16
+	date1 = new Date(date1.setHours(24)); //16
 	everyday = $('.card-everyday-wrapper');
 
 	if (date1 < now1) {

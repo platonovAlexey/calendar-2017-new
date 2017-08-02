@@ -8,6 +8,7 @@
 /*
  * Custom
  */
+//= modules/gtm.js
 //= modules/app.js
 //= modules/cardsHeader.js
 //= modules/popup.js

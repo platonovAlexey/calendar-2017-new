@@ -1,4 +1,4 @@
-console.log('Привет, как дела?');
+// console.log('Привет, как дела?');
 
 
 
@@ -14,7 +14,7 @@ $('[id^="cards_"]').each(function() {
 		var date = new Date($(this).attr('data')),
 		now = new Date();
 		day = now.getDay();
-		date = new Date(date.setHours(20)); //16
+		date = new Date(date.setHours(24)); //16
 		forecast = $('.tabs__wrapper__online');
 		completed = $('.tabs__wrapper__offline');
 		col = $('.col-lg-3.col-md-4.col-sm-7.col-xs-15');
