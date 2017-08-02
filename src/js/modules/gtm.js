@@ -34,7 +34,6 @@ function pushStateToDataLayerCLNDR2017Tabs(event) {
 							'eventCategory': 'Interactions',
 							'eventAction': 'click',
 							'eventLabel': label,
-							'eventContent': event.target.innerHTML.trim(),
 							'eventLocation': location
 			});
 			// console.log('click tabs');
